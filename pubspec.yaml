@@ -1,8 +1,9 @@
 name: sdkcomponents16
 description: A Flutter package providing a dynamic multi-select dropdown component with search, async data loading, and form validation support.
 version: 0.0.1
-license: MIT
-homepage: https://github.com/vitu168/sdkcomponents16
+homepage: https://github.com/vitu168/components-16kh
+repository: https://github.com/vitu168/components-16kh
+issue_tracker: https://github.com/vitu168/components-16kh/issues
 
 environment:
   sdk: ^3.10.1
@@ -18,11 +19,10 @@ dev_dependencies:
   flutter_lints: ^6.0.0
 
 topics:
-  - cli
-  - logging
-  - debug
-  - color
-  - console
+  - widget
+  - dropdown
+  - multi-select
+  - form
 
 platforms:
   android:
