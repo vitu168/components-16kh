@@ -1,9 +1,9 @@
-name: sdkcomponents16
+name: dynamic_multi_dropdown
 description: A Flutter package providing a dynamic multi-select dropdown component with search, async data loading, and form validation support.
 version: 0.0.3
-homepage: https://github.com/vitu168/components-16kh
-repository: https://github.com/vitu168/components-16kh
-issue_tracker: https://github.com/vitu168/components-16kh/issues
+homepage: https://github.com/vitu168/dynamic_multi_dropdown
+repository: https://github.com/vitu168/dynamic_multi_dropdown
+issue_tracker: https://github.com/vitu168/dynamic_multi_dropdown
 
 environment:
   sdk: ^3.10.1

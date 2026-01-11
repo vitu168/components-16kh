@@ -1,5 +1,5 @@
+import 'package:dynamic_multi_dropdown/controllers/dynamic_multi_dropdown_select_controller.dart';
 import 'package:flutter_test/flutter_test.dart';
-import 'package:sdkcomponents16/sdkcomponents16.dart';
 
 void main() {
   group('ExSelectController', () {

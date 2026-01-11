@@ -1,4 +1,4 @@
-# sdkcomponents16
+# dynamic_multi_dropdown
 
 A Flutter package providing a dynamic multi-select dropdown component with advanced features including search, async data loading, caching, and form validation support.
 
@@ -18,7 +18,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  sdkcomponents16: ^0.0.3
+  dynamic_multi_dropdown: ^0.0.3
 ```
 
 Then run:
@@ -32,7 +32,7 @@ flutter pub get
 ### Basic Static List
 
 ```dart
-import 'package:sdkcomponents16/sdkcomponents16.dart';
+import 'package:sdkcomponents16/dynamic_multi_dropdown.dart';
 
 // Create a controller
 final controller = ExSelectController<String>(

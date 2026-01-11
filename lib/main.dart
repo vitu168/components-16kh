@@ -1,5 +1,6 @@
+import 'package:dynamic_multi_dropdown/controllers/dynamic_multi_dropdown_select_controller.dart';
+import 'package:dynamic_multi_dropdown/dynamic_multi_dropdown_select.dart';
 import 'package:flutter/material.dart';
-import 'package:sdkcomponents16/sdkcomponents16.dart';
 
 void main() {
   runApp(const MyApp());
