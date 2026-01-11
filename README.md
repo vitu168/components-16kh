@@ -18,7 +18,7 @@ Add this to your package's `pubspec.yaml` file:
 
 ```yaml
 dependencies:
-  sdkcomponents16: ^0.0.2
+  sdkcomponents16: ^0.0.3
 ```
 
 Then run:
