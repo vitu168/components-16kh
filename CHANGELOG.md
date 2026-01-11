@@ -1,4 +1,4 @@
-# 0.0.1
+# 0.0.2
 
 * Initial release
 * DynamicMultiDropdownSelect widget with multi-select support
@@ -8,4 +8,3 @@
 * Customizable styling options
 * Data caching for async operations
 * Item ID tracking for preserving selections across data refetches
-
