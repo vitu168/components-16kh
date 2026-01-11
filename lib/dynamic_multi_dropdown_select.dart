@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'controllers/dynamic_multi_dropdown_select_controller.dart';
+
 class DynamicMultiDropdownSelect<T> extends StatefulWidget {
   const DynamicMultiDropdownSelect({
     super.key,
@@ -180,8 +181,7 @@ class _DynamicMultiDropdownSelectState<T>
                 color: Theme.of(context).cardColor,
                 borderRadius: widget.borderRadius ?? BorderRadius.circular(8.0),
                 border: Border.all(
-                  color: widget.borderColor ??
-                      Theme.of(context).dividerColor,
+                  color: widget.borderColor ?? Theme.of(context).dividerColor,
                   width: widget.borderWidth,
                 ),
               ),
@@ -189,9 +189,7 @@ class _DynamicMultiDropdownSelectState<T>
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   if (widget.controller.enableSearch) _buildSearchField(),
-                  Flexible(
-                    child: _buildItemsList(),
-                  ),
+                  Flexible(child: _buildItemsList()),
                 ],
               ),
             ),
@@ -209,9 +207,7 @@ class _DynamicMultiDropdownSelectState<T>
         decoration: InputDecoration(
           hintText: widget.searchPlaceholder,
           prefixIcon: const Icon(Icons.search, size: 20),
-          border: OutlineInputBorder(
-            borderRadius: BorderRadius.circular(8.0),
-          ),
+          border: OutlineInputBorder(borderRadius: BorderRadius.circular(8.0)),
           contentPadding: const EdgeInsets.symmetric(
             horizontal: 12.0,
             vertical: 8.0,
@@ -254,9 +250,7 @@ class _DynamicMultiDropdownSelectState<T>
           );
         }
 
-        final items = _searchQuery.isEmpty
-            ? state.items
-            : _filteredItems;
+        final items = _searchQuery.isEmpty ? state.items : _filteredItems;
 
         if (items.isEmpty) {
           return Padding(
@@ -289,9 +283,7 @@ class _DynamicMultiDropdownSelectState<T>
                       },
                     ),
                     const SizedBox(width: 8),
-                    Expanded(
-                      child: widget.itemBuilder(context, item),
-                    ),
+                    Expanded(child: widget.itemBuilder(context, item)),
                   ],
                 ),
               ),
@@ -362,8 +354,7 @@ class _DynamicMultiDropdownSelectState<T>
       builder: (FormFieldState<List<T>> field) {
         // Sync FormField with controller
         WidgetsBinding.instance.addPostFrameCallback((_) {
-          if (mounted &&
-              field.value != widget.controller.selectedValues) {
+          if (mounted && field.value != widget.controller.selectedValues) {
             field.didChange(widget.controller.selectedValues);
           }
         });
@@ -371,9 +362,9 @@ class _DynamicMultiDropdownSelectState<T>
         final borderColor = field.hasError
             ? (widget.errorBorderColor ?? Theme.of(context).colorScheme.error)
             : _isOpen
-                ? (widget.focusedBorderColor ??
-                    Theme.of(context).colorScheme.primary)
-                : (widget.borderColor ?? Theme.of(context).dividerColor);
+            ? (widget.focusedBorderColor ??
+                  Theme.of(context).colorScheme.primary)
+            : (widget.borderColor ?? Theme.of(context).dividerColor);
 
         return Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -418,7 +409,9 @@ class _DynamicMultiDropdownSelectState<T>
                     decoration: BoxDecoration(
                       color: widget.enabled
                           ? Theme.of(context).cardColor
-                          : Theme.of(context).disabledColor.withOpacity(0.1),
+                          : Theme.of(
+                              context,
+                            ).disabledColor.withValues(alpha: 0.1),
                       borderRadius:
                           widget.borderRadius ?? BorderRadius.circular(8.0),
                       border: Border.all(
@@ -454,17 +447,18 @@ class _DynamicMultiDropdownSelectState<T>
                                                 size: 16,
                                               ),
                                               onDeleted: widget.enabled
-                                                  ? () =>
-                                                      _removeSelectedItem(item)
+                                                  ? () => _removeSelectedItem(
+                                                      item,
+                                                    )
                                                   : null,
                                               materialTapTargetSize:
                                                   MaterialTapTargetSize
                                                       .shrinkWrap,
-                                              padding: const EdgeInsets
-                                                  .symmetric(
-                                                horizontal: 8.0,
-                                                vertical: 2.0,
-                                              ),
+                                              padding:
+                                                  const EdgeInsets.symmetric(
+                                                    horizontal: 8.0,
+                                                    vertical: 2.0,
+                                                  ),
                                             ),
                                           )
                                           .toList(),
