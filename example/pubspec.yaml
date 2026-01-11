@@ -1,5 +1,5 @@
 name: example
-description: Example app for sdkcomponents16 package
+description: Example app for dynamic multi-select dropdown package
 publish_to: 'none'
 
 environment:
