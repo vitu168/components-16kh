@@ -48,6 +48,3 @@ Thumbs.db
 
 # Coverage
 coverage/
-
-# Lock files (optional - uncomment if you want to ignore)
-pubspec.lock
